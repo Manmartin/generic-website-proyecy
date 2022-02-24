@@ -108,7 +108,7 @@ body {
 .header-links {
     font-size: 16px;
     margin: auto;
-    width: 35%;
+    width: 512px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -145,7 +145,6 @@ body {
 
 
 .images {
-    height: 200px;
     width: 100%;
     text-align: center;
     display: flex;
@@ -155,12 +154,11 @@ body {
 }
 
 .images img {
-    max-height: 100%;
+    max-height: 200px;
     max-width: 15%;
 }
 
 /* Footer */
-
 
 .box-logo-footer {
     margin:  2% auto;
@@ -235,7 +233,7 @@ body {
 
 .copyright {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -251,10 +249,55 @@ body {
     .widthbox {
         width: 100%;
     }
+
     .images {
+        width: 80%;
+        margin: auto;
+        flex-wrap: wrap;
+    }
+    .images img {
+        min-width: 150px;
+        object-fit: cover;
+        width:  30%;
+        height: 300px;
+        max-width: none;
+        padding-bottom: 15px;
+    }
+    .navigation {
         display: none;
     }
+}
+
+@media (max-width: 500px) {
     .header-links {
-        width: 50%;
+        width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+    .header-links span {
+        margin: 30px 0;
+    }
+    .footer-links {
+        padding:  auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        margin-bottom: 30px;
+    }
+    .footer-links a{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header h2 {
+        padding-bottom: 10px;
+    }
+
+    .images img {
+        width: 100%;
+        margin: 20px auto;
     }
 }
